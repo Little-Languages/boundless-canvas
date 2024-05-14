@@ -1,0 +1,48 @@
+{
+  "name": "@little-languages/boundless-canvas",
+  "description": "Spatial canvas primitives for the web.",
+  "version": "0.1.0",
+  "type": "module",
+  "sideEffects": false,
+  "author": "Christopher Shank <chris.shank.23@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Little-Languages/boundless-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Little-Languages/boundless-canvas/issues"
+  },
+  "homepage": "https://github.com/Little-Languages/boundless-canvas#readme",
+  "exports": {
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "spatial canvas",
+    "shapes",
+    "custom element"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "vite demo",
+    "demo:build": "vite build demo",
+    "demo:preview": "pnpm demo:build && vite preview demo",
+    "publish": "pnpm build && npm publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@lit/reactive-element": "^2.0.4"
+  }
+}
